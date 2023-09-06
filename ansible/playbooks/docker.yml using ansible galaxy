@@ -1,0 +1,15 @@
+install docker 
+
+#cd /etc/ansible/roles/
+#sudo ansible-galaxy install --roles-path /etc/ansible/roles <geerlingguy.docker //role name>
+
+-Then go to ansible 
+
+#sudo vim docker.yml
+
+---
+- hosts: jenkinsservers
+  become: true
+  become_user: root
+  roles:
+    - geerlingguy.docker
